@@ -1,4 +1,9 @@
 import { createRouter, createWebHistory } from 'vue-router';
+import Accompagnement from '../views/Accompagnement.vue'
+import Modalite from '../views/under_views/Modalite.vue'
+import Missions from '../views/under_views/missions_accompagnement.vue'
+import Pack from '../views/under_views/packs_tarifs.vue'
+
 
 const router = createRouter({
 	history: createWebHistory(import.meta.env.BASE_URL),
@@ -12,24 +17,24 @@ const router = createRouter({
 		{
 			path: '/accompagnement',
 			name: 'accompagnement',
-			component: () => import('../views/Accompagnement.vue'),
+			component: Accompagnement,
 		},
 		{
-			path: '/modalite',
+			path: '/accompagnement/modalite',
 			name: 'modalite',
-			component: () => import('../views/under_views/modalite.vue'),
+			component: Modalite,
 		},
 		{
-			path: '/missions-accompagnement',
+			path: '/accompagnement/missions-accompagnement',
 			name: 'missions-accompagnement',
-			component: () =>
-				import('../views/under_views/missions_accompagnement.vue'),
+			component: Missions
 		},
 		{
-			path: '/pack-tarifs',
+			path: '/accompagnement/pack-tarifs',
 			name: 'pack-tarifs',
-			component: () => import('../views/under_views/packs_tarifs.vue'),
+			component: Pack ,
 		},
+
 
 		// section formations
 		{
@@ -38,43 +43,43 @@ const router = createRouter({
 			component: () => import('../views/Formations.vue'),
 		},
 		{
-			path: '/objectifs',
+			path: '/formations/objectifs',
 			name: 'objectifs',
 
 			component: () => import('../views/under_views/objectifs.vue'),
 		},
 		{
-			path: '/connaissance-des-aliments',
+			path: '/formations/connaissance-des-aliments',
 			name: 'connaissance-des-aliments',
 			component: () => import('../views/under_views/connaissance_aliments.vue'),
 		},
 		{
-			path: '/dietetique_nutrition',
-			name: 'dietetique_nutrition',
+			path: '/formations/dietetique-nutrition',
+			name: 'dietetique-nutrition',
 			component: () => import('../views/under_views/dietetique_nutrition.vue'),
 		},
 		{
-			path: '/GEMRCN',
+			path: '/formations/GEMRCN',
 			name: 'GEMRCN',
 			component: () => import('../views/under_views/GEMRCN.vue'),
 		},
 		{
-			path: '/HACCP-hygiene',
+			path: '/formations/HACCP-hygiene',
 			name: 'HACCP-hygiene',
 			component: () => import('../views/under_views/HACCP_hygiene.vue'),
 		},
 		{
-			path: '/pilotage-gestion',
+			path: '/formations/pilotage-gestion',
 			name: 'pilotage_gestion',
 			component: () => import('../views/under_views/pilotage_gestion.vue'),
 		},
 		{
-			path: '/Gestions-achats',
+			path: '/formations/Gestions-achats',
 			name: 'Gestions-achats',
 			component: () => import('../views/under_views/Gestions_achats.vue'),
 		},
 		{
-			path: '/Gestions-operationelle',
+			path: '/formations/Gestions-operationelle',
 			name: 'Gestions-operationelle',
 			component: () =>
 				import('../views/under_views/Gestions_operationelle.vue'),
